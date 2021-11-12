@@ -15,7 +15,7 @@ class AuthorController extends Controller
     public function index()
     {
         //
-        $author = Athor::all();
+        $author = Author::all();
         return view('admin.author.index', compact('author'));
     }
 
@@ -27,7 +27,7 @@ class AuthorController extends Controller
     public function create()
     {
         //
-        return view('admin.author.creat');
+        return view('admin.author.create');
     }
 
     /**
@@ -40,12 +40,12 @@ class AuthorController extends Controller
     {
         //
         // validasi data
-        $validate = $request->calidate([
+        $validated = $request->validate([
             'name' => 'required',
         ]);
 
         $author = new Author;
-        $author->name =$request->name;
+        $author->name = $request->name;
         $author->save();
         return redirect()->route('author.index');
     }
@@ -59,7 +59,7 @@ class AuthorController extends Controller
     public function show($id)
     {
         //
-        $author =Author::findOrfail($id);
+        $author = Author::findOrFail($id);
         return view('admin.author.show', compact('author'));
     }
 
@@ -72,7 +72,7 @@ class AuthorController extends Controller
     public function edit($id)
     {
         //
-        $author =Author::findOrfail($id);
+        $author = Author::findOrFail($id);
         return view('admin.author.edit', compact('author'));
     }
 
@@ -87,12 +87,12 @@ class AuthorController extends Controller
     {
         //
         // validasi data
-        $validate = $request->validate([
+        $validated = $request->validate([
             'name' => 'required',
         ]);
 
-        $author = Author::findOrfail($id);
-        $author->name =$request->name;
+        $author = Author::findOrFail($id);
+        $author->name = $request->name;
         $author->save();
         return redirect()->route('author.index');
     }
@@ -106,7 +106,7 @@ class AuthorController extends Controller
     public function destroy($id)
     {
         //
-        $author = Author::findOrfail($id);
+        $author = Author::findOrFail($id);
         $author->delete();
         return redirect()->route('author.index');
     }

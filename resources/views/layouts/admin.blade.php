@@ -35,30 +35,22 @@
   </div>
 
   <!-- Navbar -->
- @include('layouts.partials.navbar')
+ @include('layouts.partials.nav')
   <!-- End navbar -->
 
   <!-- Main Sidebar Container -->
-  @include('layouts.partials.sidbar')
-  <!-- End sidebar --!>
+  @include('layouts.partials.sidebar')
+  <!-- end main sidebar --!>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-
-  <section>
-@yield('header')
-  </section>
+       @yield('header')
     <!-- /.content-header -->
 
     <!-- Main content -->
     <section class="content">
         @yield('content')
-    </section>
-    <!-- /.container-fluid -->
-
-
-
     </section>
     <!-- /.content -->
   </div>

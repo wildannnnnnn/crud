@@ -5,19 +5,13 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    larapus
+                   Larapus
                 </div>
                 <div class="card-body">
-                    <center>
-                        selamat datang di <strong>larapus</strong>
-                    </center>
+                   Selamat Datang di <strong>Larapus</strong>
                 </div>
             </div>
-
         </div>
-
     </div>
-
 </div>
-
 @endsection

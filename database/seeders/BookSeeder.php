@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Author;
 use App\Models\Book;
+
 class BookSeeder extends Seeder
 {
     /**
@@ -14,22 +15,23 @@ class BookSeeder extends Seeder
      */
     public function run()
     {
-        //membuat sample penulis
-        $author1 = Author::create(['name'=>'rahmat awaludin']);
-        $author2 = Author::create(['name'=>'nadhifa a isana']);
-        $author3 = Author::create(['name'=>'takdir a ridwan']);
+        // Membuat sample penulis
+        $author1 = Author::create(['name'=>'Rahmat Awaludin']);
+        $author2 = Author::create(['name'=>'Nadhi A Tsana']);
+        $author3 = Author::create(['name'=>'Takdir A Ridwan']);
 
-
-        //membuat sample book
-    $book1 = Book::create(['title'=>'seminggu belajar laravel',
-        'amount' => 353, 'author_id' => $author1->id,
-    ]);
-    $book2 = Book::create(['title'=>'rintik sedu',
-        'amount' => 157, 'author_id' => $author2->id,
-    ]);
-    $book3 = Book::create(['title'=>'sobat sakit',
-        'amount' => 251, 'author_id' => $author3->id,
-    ]);
-
+        // Membuat sample book
+        $book1 = Book::create(['title'=>'Seminggu Belajar Laravel',
+            'amount'=>353, 'author_id'=>$author1->id,
+        ]);
+        $book2 = Book::create(['title'=>'Rintik Sedu',
+        'amount'=>157, 'author_id'=>$author2->id,
+        ]);
+        $book3 = Book::create(['title'=>'Sobat Sakit',
+        'amount'=>251, 'author_id'=>$author3->id,
+        ]);
+        $book4 = Book::create(['title'=>'Bincang Akhlak',
+        'amount'=>178, 'author_id'=>$author3->id,
+        ]);
     }
 }

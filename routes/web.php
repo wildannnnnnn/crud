@@ -1,5 +1,6 @@
 <?php
-use App\Http\Controllers\AuthorContrpller;
+
+use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\BookController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,12 +23,12 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-//admin route
-Route::group(['prefix'=>'admin','middleware'=> ['auth','role:admin']],function () {
-    route::get('/', function (){
-        return view('admin.index');
-    });
-    route::rescource('author', AuthorController::class);
-    route::rescource('books', BooksContoller::class);
-
+// Admin Route
+Route::group(['prefix'=>'admin','middleware'=> ['auth', 'role:admin']],function () {
+  Route::get('/',function(){
+    return view('admin.index');
+  });
+  Route::resource('author', AuthorController::class);
+  Route::resource('books', BookController::class);
 });
+

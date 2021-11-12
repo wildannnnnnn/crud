@@ -18,18 +18,22 @@
             <div class="card">
                 <div class="card-header">Data Penulis</div>
                 <div class="card-body">
-                    <form action="{{route('author.store')}}" method="post">
+                   <form action="{{route('author.store')}}" method="post">
                         @csrf
                         <div class="form-group">
                             <label for="">Masukan Nama Penulis</label>
-                            <input type="text" name="name" class="form-control @error('name') is-invalid " @enderror">
-                            @error('name')
+                            <input type="text" name="name" class="form-control @error('name') is-invalid @enderror">
+                             @error('name')
                                 <span class="invalid-feedback" role="alert">
-                                    <strong>{{$messege}}</strong>
+                                    <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
                         </div>
-                    </form>
+                        <div class="form-group">
+                            <button type="reset" class="btn btn-outline-warning">Reset</button>
+                            <button type="submit" class="btn btn-outline-primary">Simpan</button>
+                        </div>
+                   </form>
                 </div>
             </div>
         </div>
