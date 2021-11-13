@@ -18,7 +18,7 @@ class BookController extends Controller
         // mengambil data 'book' dan juga 'author'
         // yang berelasi melalui method 'author'
         // yang berasal dari model 'book'
-        $book = Book::with('author')->get();
+        $books = Book::with('author')->get();
         return view('admin.book.index',compact('books'));
     }
 
