@@ -16,12 +16,12 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Data Penulis</div>
+                <div class="card-header">Data pelanggan</div>
                 <div class="card-body">
                    <form action="{{route('author.store')}}" method="post">
                         @csrf
                         <div class="form-group">
-                            <label for="">Masukan Nama Penulis</label>
+                            <label for="">Masukan Nama Pelanggan</label>
                             <input type="text" name="name" class="form-control @error('name') is-invalid @enderror">
                              @error('name')
                                 <span class="invalid-feedback" role="alert">

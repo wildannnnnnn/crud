@@ -4,7 +4,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-12">
-                <h1 class="m-0">Data Buku</h1>
+                <h1 class="m-0">pesan</h1>
             </div>
         </div>
     </div>
@@ -17,19 +17,16 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    Data Buku
-                    <a href="{{route('books.create')}}" class="btn btn-sm btn-outline-primary float-right">Tambah Penulis</a>
+                   isi Data pesanan
+                    <a href="{{route('books.create')}}" class="btn btn-sm btn-outline-primary float-right">Tambah pesanan</a>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table">
                             <tr>
-                                <th>Nomor</th>
-                                <th>Judul Buku</th>
-                                <th>Nama Penulis</th>
-                                <th>Jumlah Buku</th>
-                                <th>Cover Buku</th>
-                                <th>Aksi</th>
+                                <th>Nomor pesanan</th>
+                                <th>nama pesanan</th>
+                                <th>pesan</th>
                             </tr>
                             @php $no=1; @endphp
                             @foreach($books as $data)

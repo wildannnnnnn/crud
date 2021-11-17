@@ -18,7 +18,7 @@
             <div class="card">
                 <div class="card-header">Admin Page</div>
                 <div class="card-body">
-                    Welcome back <strong>admin</strong>
+                    Welcome back <strong>Admin</strong>
                 </div>
             </div>
         </div>

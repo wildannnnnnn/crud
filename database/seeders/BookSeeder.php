@@ -21,16 +21,16 @@ class BookSeeder extends Seeder
         $author3 = Author::create(['name'=>'Takdir A Ridwan']);
 
         // Membuat sample book
-        $book1 = Book::create(['title'=>'Seminggu Belajar Laravel',
+        $book1 = Book::create(['title'=>'mie ayam',
             'amount'=>353, 'author_id'=>$author1->id,
         ]);
-        $book2 = Book::create(['title'=>'Rintik Sedu',
+        $book2 = Book::create(['title'=>'es batu',
         'amount'=>157, 'author_id'=>$author2->id,
         ]);
-        $book3 = Book::create(['title'=>'Sobat Sakit',
+        $book3 = Book::create(['title'=>'chiken',
         'amount'=>251, 'author_id'=>$author3->id,
         ]);
-        $book4 = Book::create(['title'=>'Bincang Akhlak',
+        $book4 = Book::create(['title'=>'es kelapa',
         'amount'=>178, 'author_id'=>$author3->id,
         ]);
     }
